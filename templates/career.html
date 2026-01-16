@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Brew Careers</title>
+    <link rel="stylesheet" href="{% static 'career.css' %}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">NEXUS BREW</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="/careers" class="active">Careers</a></li>
+        </ul>
+    </nav>
+
+    <section class="career-section">
+        <h1>Join the Nexus Crew</h1>
+        <p>Where coffee meets innovation. Submit your application below.</p>
+
+        <form class="career-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Resume (PDF)</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profile_pic">Profile Picture</label>
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="cover_letter">Cover Letter</label>
+                <textarea id="cover_letter" name="cover_letter" rows="5" placeholder="Tell us why you want to join..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="applied_on">Applied On</label>
+                <input type="date" id="applied_on" name="applied_on" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Nexus Brew | Powered by Quantum Coffee Tech</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* ====== Careers Page Styling ====== */
+
+body {
+  margin: 0;
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle at top, #0c0f18, #050509);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+nav.navbar {
+  background: rgba(10, 10, 20, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  border-bottom: 1px solid #1effff33;
+}
+
+.navbar .logo {
+  font-family: 'Orbitron', sans-serif;
+  color: #1effff;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #1effff;
+}
+
+.career-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #1effff33;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #1effff22;
+  text-align: center;
+}
+
+.career-section h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #1effff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.career-section p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.career-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #1effff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #1effff44;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1effff;
+  box-shadow: 0 0 10px #1effff55;
+}
+
+.submit-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  background: #1effff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #00d4d4;
+  box-shadow: 0 0 20px #1effff55;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  border-top: 1px solid #1effff22;
+  margin-top: 60px;
+}
